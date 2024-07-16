@@ -106,7 +106,7 @@ app.post('/login', async (req, res) => {
             expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
             httpOnly: true,
             sameSite:'none',
-            secure:false
+            secure:true
         }
 
         return res.cookie("token", token, options).json({
