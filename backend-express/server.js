@@ -148,7 +148,7 @@ app.get('/dashboard', (req, res) => {
 
 app.get('/logout',(req,res)=>{
 
-    res.clearCookie("token")
+    res.clearCookie("token",{sameSite:'none',secure:true})
     res.json({logout:true})
 })
 
